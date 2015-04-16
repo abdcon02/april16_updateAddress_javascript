@@ -1,12 +1,12 @@
 # Address Book exercise for Epicodus
 
-### Kyle Giard-Chase & Tom Mertz
+### Connor Abdelnoor & Tom Mertz
 
 ###### April 13, 2015
 
 #### Description
 
-Takes user input to add first name, last name, and address of an individual into an address book. The contacts are listed out by first name and the user can click to expand info regarding each contact.
+Takes user input to add first name, last name, and address of an individual into an address book. The contacts are listed out by first name and the user can click to expand info regarding each contact. Each individual contact may have multiple addresses.
 
 #### Set up
 
