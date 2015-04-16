@@ -18,7 +18,7 @@ $(document).ready(function() {
       addresses: []
     };
 
-    $(".address").each(function() {
+    $(".one-address").each(function() {
       var inputStreet = $(this).find("input.street").val();
       var inputCity = $(this).find("input.city").val();
       var inputState = $(this).find("input.state").val();
@@ -42,21 +42,19 @@ $(document).ready(function() {
     $("#contact-list").append("<li><span class='contact clickable'>" + contact.firstName + "</span></li>");
 
     $(".contact").last().click(function() {
-
       $(".first-name").text(contact.firstName);
       $(".last-name").text(contact.lastName);
-
-
+      $('.address').remove();
+      contact.addresses.forEach(function(address) {
+        $('#contacts').append('<p class="address info">' + address.fullAddress() + '</p>');
+      });
 
       $("#contacts").show();
     });
-
-
   });
 
   $('#add-address').click(function(event) {
     event.preventDefault();
-
     $('.one-address').first().clone().appendTo($('.addresses'));
     $("input.street").last().val("");
     $("input.city").last().val('');
@@ -67,7 +65,6 @@ $(document).ready(function() {
   $("#remove-address").click(function() {
 
     var addressNumber = $(".one-address");
-    console.log(addressNumber.length);
     if(addressNumber.length !== 1) {
       $('.one-address').first().remove();
     }
