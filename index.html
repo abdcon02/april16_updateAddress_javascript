@@ -27,27 +27,36 @@
             <input class="form-control" type="text" id="lastName">
           </div>
 
-          <div class="form-group">
-            <label for="street">Street:</label>
-            <input class="form-control" type="text" id="street">
+
+          <div class="addresses">
+            <div class="one-address">
+              <div class="form-group">
+                <label for="street">Street:</label>
+                <input class="form-control street" type="text">
+              </div>
+
+              <div class="form-group">
+                <label for="city">City:</label>
+                <input class="form-control city" type="text">
+              </div>
+
+              <div class="form-group">
+                <label for="state">State:</label>
+                <input class="form-control state" type="text">
+              </div>
+
+              <div class="form-group">
+                <label for="zipcode">Zip Code:</label>
+                <input class="form-control zipcode" type="text">
+              </div>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="city">City:</label>
-            <input class="form-control" type="text" id="city">
-          </div>
-
-          <div class="form-group">
-            <label for="state">State:</label>
-            <input class="form-control" type="text" id="state">
-          </div>
-
-          <div class="form-group">
-            <label for="zipcode">Zip Code:</label>
-            <input class="form-control" type="text" id="zipcode">
-          </div>
-
-            <button class="btn btn-success"type="submit">Add Contact</button>
+            <div class="btn-group" role="group" aria-label="...">
+              <button class="btn btn-success"type="submit">Add Contact</button>
+              <span id="add-address" class="btn btn-info">Add Address</span>
+              <span id="remove-address" class="btn btn-danger">Remove Address</span>
+            </div>
         </form>
 
         <h2>Contact List</h2>
